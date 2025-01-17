@@ -2,7 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/u1575278/public_html/bokin
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp css/style.css $DEPLOYPATH
-    - /bin/cp js/scripts.js $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH/
+    - /bin/cp -R css $DEPLOYPATH/
+    - /bin/cp -R js $DEPLOYPATH/
+    - /bin/cp -R assets $DEPLOYPATH/
+    - /bin/chmod -R 755 $DEPLOYPATH/
